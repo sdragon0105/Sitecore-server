@@ -1,18 +1,19 @@
 const express = require('express')
 const app = express()
-const port = 3000
+const port = 5000
 const cors = require('cors');
 
 app.use(cors('*'));
 app.use(express.json());
-app.use(express.urlencoded());
+
 
 app.get('/', (req, res) => {
   res.send('Hello World!')
 })
 
-app.post('/signup', (req, res) => {
-    console.log(req.body);
+app.get('/airtable', (req, res) => {
+  console.log(123);
+    console.log(req);
     res.status(200).json({ message: 'OK' });
 });
 
